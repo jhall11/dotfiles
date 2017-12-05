@@ -1,0 +1,45 @@
+[core]
+	editor = vim
+	attributesfile = /home/sdn/.gitattributes
+[color]
+	ui = auto
+[push]
+	default = tracking
+[filter "fix-eol-eof"]
+	clean = fixup-eol-eof
+	smudge = cat
+	required = true
+[diff]
+	renames = copies
+	mnemonicprefix = true
+	algorithm = patience
+[branch]
+	autosetupmerge = true
+[rerere]
+	enabled = true
+[merge]
+	stat = true
+[alias]
+    lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+    lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+    lg = !"git lg1"
+	lol = log --oneline --graph --decorate
+	loa = log --pretty=format:\"%C(red)%cr%C(blue) %h %C(reset)%an %Cgreen%d%x09%Cblue%s %C(yellow)(%ad)\" --abbrev-commit --decorate=short --date=local
+	ls = log --pretty=format:\"%C(red)%cr%C(blue) %h %C(reset)%an %Cgreen%d%x09%Cblue%s %C(yellow)(%ad)\" --abbrev-commit --decorate=short --date=local
+	ls = log --pretty=format:\"%C(red)%cr%C(blue) %h %C(reset)%an %Cgreen%d%x09%Cblue%s %C(yellow)(%ad)\" --abbrev-commit --decorate=full --date=local
+	ls = log --pretty=format:\"%C(red)%cr%C(blue) %h %C(reset)%an %Cgreen%d%x09%Cblue%s %C(yellow)(%ad)\" --abbrev-commit --decorate=short --date=local
+	loa = log --pretty=format:\"%C(auto,red)%cr%C(auto,blue) %h %C(auto,reset)%an(%cN) %C(auto,green)%d%x09%C(auto,blue)%s %C(auto,yellow)(%cd)\" --abbrev-commit --decorate=short --date=local
+	loa = log --pretty=format:\"%w%C(auto,red)%cr%C(auto,blue) %h %C(auto,reset)%an(%cN) %C(auto,green)%d%x09%C(auto,blue)%s %C(auto,yellow)(%cd)\" --abbrev-commit --decorate=short --date=local
+	loa = log --pretty=format:\"%w()%C(auto,red)%cr%C(auto,blue) %h %C(auto,reset)%an(%cN) %C(auto,green)%d%x09%C(auto,blue)%s %C(auto,yellow)(%cd)\" --abbrev-commit --decorate=short --date=local
+	loa = log --pretty=format:\"%w(79,6,9)%C(auto,red)%cr%C(auto,blue) %h %C(auto,reset)%an(%cN) %C(auto,green)%d%x09%C(auto,blue)%s %C(auto,yellow)(%cd)\" --abbrev-commit --decorate=short --date=local
+	loa = log --pretty=format:\"%w(79,0,9)%C(auto,red)%cr%C(auto,blue) %h %C(auto,reset)%an(%cN) %C(auto,green)%d%x09%C(auto,blue)%s %C(auto,yellow)(%cd)\" --abbrev-commit --decorate=short --date=local
+	loa = log --pretty=format:\"%w(120,0,9)%C(auto,red)%cr%C(auto,blue) %h %C(auto,reset)%an(%cN) %C(auto,green)%d%x09%C(auto,blue)%s %C(auto,yellow)(%cd)\" --abbrev-commit --decorate=short --date=local
+	loa = log --pretty=format:\"%w(100,0,9)%C(auto,red)%cr%C(auto,blue) %h %C(auto,reset)%an(%cN) %C(auto,green)%d%x09%C(auto,blue)%s %C(auto,yellow)(%cd)\" --abbrev-commit --decorate=short --date=local
+	loa = log --pretty=format:\"%C(auto,red)%cr%C(auto,blue) %h %C(auto,reset)%an(%cN) %C(auto,green)%d%x09%C(auto,blue)%s %C(auto,yellow)(%cd)\" --abbrev-commit --decorate=short --date=local
+[remote "origin"]
+	prune = true
+[color "diff"]
+	new = green
+	func = magenta
+	whitespace = red reverse
+	meta = blue bold
